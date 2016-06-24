@@ -40,5 +40,5 @@ def expand_tweet_urls(tweet):
     urls = tweet.urls
     for url in urls:
         text = text.replace(url.url, '<a href="%s" target="_blank">%s</a>' % (url.expanded_url, url.url))
-    tweet.SetText(text)
+    tweet.text = text
     return tweet
